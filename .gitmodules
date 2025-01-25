@@ -1,0 +1,6 @@
+[submodule "NinjaTraderServer/protos"]
+	path = NinjaTraderServer/protos
+	url = https://github.com/sayedrasheed/tradebot-protos
+[submodule "NinjaTraderServer/Zenoh"]
+	path = NinjaTraderServer/Zenoh
+	url = https://github.com/sayedrasheed/zenoh-node-csharp
