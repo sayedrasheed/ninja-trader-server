@@ -1,0 +1,60 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Platforms>AnyCPU;x64;x86</Platforms>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+	<PropertyGroup>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <Compile Remove="Zenoh\**" />
+	  <EmbeddedResource Remove="Zenoh\**" />
+	  <None Remove="Zenoh\**" />
+	</ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Protobuf" Version="3.28.2" />
+    <PackageReference Include="Grpc.Tools" Version="2.67.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="YamlDotNet" Version="16.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="Zenoh\Zenoh\Zenoh.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+	  <Reference Include="NinjaTrader.Client">
+	    <HintPath>..\..\..\..\..\..\Program Files\NinjaTrader 8\bin\NinjaTrader.Client.dll</HintPath>
+	  </Reference>
+	  
+  </ItemGroup>
+
+  <ItemGroup>
+	  <Protobuf Include="protos\service\types\network.proto" />
+	  <Protobuf Include="protos\service\types\topic.proto" AdditionalImportDirs="protos\service\types" />
+	  <Protobuf Include="protos\service\messages\start_ninja_datafeed.proto" AdditionalImportDirs="protos\service\types" />
+	  <Protobuf Include="protos\service\messages\start_ninja_orderfeed.proto" AdditionalImportDirs="protos\service\types" />
+	  <Protobuf Include="protos\service\messages\join_ninjafeed.proto" AdditionalImportDirs="protos\service\types" />
+	  <Protobuf Include="protos\service\types\datafeed_stream.proto" />
+	  <Protobuf Include="protos\service\types\message_type.proto" />
+	  <Protobuf Include="protos\order\order.proto" />
+	  <Protobuf Include="protos\broker\order_filled.proto" />
+	  <Protobuf Include="protos\datafeed\tick.proto" />
+	  <Protobuf Include="protos\datafeed\candle.proto" AdditionalImportDirs="protos\datafeed" />
+	  <Protobuf Include="protos\datafeed\historical_data.proto" AdditionalImportDirs="protos\datafeed" />
+	  <Protobuf Include="protos\datafeed\ohlcv.proto" />
+  </ItemGroup>
+
+</Project>

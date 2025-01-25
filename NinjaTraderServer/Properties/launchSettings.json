@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "NinjaTraderServer": {
+      "commandName": "Project",
+      "commandLineArgs": "\"C:\\Users\\Sayed Amir\\Documents\\dev\\trading-bot-rs\\config\\service.yml\"",
+      "nativeDebugging": true
+    }
+  }
+}

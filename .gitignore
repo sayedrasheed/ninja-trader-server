@@ -1,0 +1,72 @@
+# Ignore build outputs
+bin/
+obj/
+out/
+
+# Ignore user-specific files
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.userprefs
+
+# Ignore logs and debugging files
+*.log
+*.tlog
+*.vspscc
+*.vspcc
+
+# Ignore Visual Studio Code settings
+.vscode/
+
+# Ignore Visual Studio folders and files
+.vs/
+*.VC.db
+*.VC.VC.opendb
+
+# Ignore Rider/JetBrains IDE files
+.idea/
+*.sln.iml
+
+# Ignore temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+
+# Ignore NuGet packages
+*.nupkg
+packages/
+.nuget/
+
+# Ignore build results
+project.lock.json
+project.fragment.lock.json
+
+# Ignore publish outputs
+.publish/
+
+# Ignore testing files
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+*.testsettings
+
+# Ignore application insights config
+ApplicationInsights.config
+ApplicationInsights.config.local
+
+# Ignore tool-generated files
+Generated_Code/
+
+# Ignore ReSharper files
+_ReSharper.Caches/
+*.DotSettings.user
+
+# Ignore other IDE-specific files
+*.ide.workspace
+
+# Ignore generated documentation
+*.xml
